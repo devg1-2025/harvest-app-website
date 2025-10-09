@@ -12,7 +12,7 @@ function BlogComingSoon() {
           Email us
         </button>
         </a>
-      <a href="https://wa.me/2348166528347">
+      <a href="https://wa.me/2348166528437">
         <button className="bg-green-800 text-xl text-white mt-5 font-bold border text-green-800 cursor-pointer py-2 px-10 border rounded-md text-center hover:shadow-lg transition w-full">
           Send a message
         </button>

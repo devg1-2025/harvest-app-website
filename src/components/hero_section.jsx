@@ -4,7 +4,7 @@ function HeroSection () {
     return (
         <div className="flex flex-col md:flex md:flex-row items-center gap-5 " id="Home">
 
-        <div className="grid place-items-center px-10">
+        <div className="grid place-items-center pt-10:pt-0 md px-10">
             <h1 className="text-6xl font-bold lg:text-7xl text-center"> <span className="text-green-800">Never Miss</span> a Follow-Up</h1>
             <p className=" mt-5 text-lg text-center  max-w-4xl">
                 The Harvest App helps churches follow up with first-timers and new converts, and it works — offline.

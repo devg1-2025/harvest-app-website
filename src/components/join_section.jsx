@@ -14,10 +14,10 @@ function JoinSection() {
       </form> */}
 
       {/* Join WhatsApp channel */}
-      <div className="flex justify-center">
+      <div className="flex justify-center w-full">
 
         <a href="https://whatsapp.com/channel/0029VbBLgu5CHDydjvYI5B1X">
-        <button className="  w-full bg-green-800 mt-5 font-bold text-white cursor-pointer py-2 px-20 border rounded-md text-center hover:shadow-lg transition ">Join Now</button>
+        <button className=" bg-green-800 mt-5 font-bold text-white cursor-pointer py-2 px-10 border rounded-md text-center hover:shadow-lg transition ">Join Now</button>
         </a>
       </div>
     </section>
