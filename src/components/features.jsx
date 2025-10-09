@@ -2,14 +2,14 @@ import img from "../assets/images/harvest_app_mockup1.png"
 
 function Features () {
     return (
-        <div className="relative mt-10 border-b border-neutral-100 px-10">
-            <div className="text-center">
+        <div className=" mt-10 border-b border-neutral-100">
+            <div className="text-center px-5">
              <h2 className="text-3xl font-bold text-center">Powerful features to help you evangelize</h2>
             </div>
 
-            <div className="p-10 ">
-                <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="flex bg-green-50/40 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <div className="py-10 ">
+                <div className="md:flex gap-10 px-10">
+                <div className="flex bg-green-50/40 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition mb-5">
                     {/* <div className="flex mx-6 h-10 w-10 p-2 "> */}
                         {/* feature icon */}
                     {/* </div> */}
@@ -25,12 +25,12 @@ function Features () {
                         <p className="text-md mb-2 text-neutral-500">Capture new convert information instantly during or after service</p>
                     </div>
                 </div> */}
-                <div className="flex bg-green-50/40 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div className="flex bg-green-50/40 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition mb-5">
                     {/* <div className="flex mx-6 h-10 w-10 p-2 "> */}
                         {/* feature icon */}
                     {/* </div> */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-2">Bible Verse Nudges</h3>
+                        <h3 className="text-xl font-semibold mb-2">Bible Verses</h3>
                         <p className="text-md mb-2 text-neutral-500">Get relevant scripture suggestions for encouragement and follow-up conversations.</p>
                     </div>
                 </div>

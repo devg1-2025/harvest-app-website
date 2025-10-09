@@ -12,8 +12,7 @@ function Home() {
     return (
         <>
         <NavBar />
-        <div className=' mx-auto pt-20 px-6'>
-        </div>
+
         <HeroSection />
         <Problems />
         <Features />

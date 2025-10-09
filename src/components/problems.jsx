@@ -1,6 +1,6 @@
 function Problems() {   
     return (
-        <div className="pt-10 px-20 bg-green-800 pb-20 text-white">
+        <div className="pt-10 px-10 bg-green-800 pb-20 text-white">
             <h2 className="text-3xl font-bold mb-4 text-center">Why the Harvest App?</h2>
             <h3 className="text-xl font-sm mb-8 text-center">Many churches struggle with...</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-green-950 ">
