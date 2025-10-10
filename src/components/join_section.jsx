@@ -17,7 +17,7 @@ function JoinSection() {
       <div className="flex justify-center w-full">
 
         <a href="https://whatsapp.com/channel/0029VbBLgu5CHDydjvYI5B1X">
-        <button className=" bg-green-800 mt-5 font-bold text-white cursor-pointer py-2 px-10 border rounded-md text-center hover:shadow-lg transition ">Join Now</button>
+        <button className=" bg-green-800 text-xl text-white mt-5 font-bold border text-green-800 cursor-pointer py-2 px-25 border rounded-md text-center hover:shadow-lg transition w-full">Join Now</button>
         </a>
       </div>
     </section>

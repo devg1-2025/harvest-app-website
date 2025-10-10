@@ -2,7 +2,7 @@ import img from "../assets/images/harvest_app_mockup1.png"
 
 function HeroSection () {
     return (
-        <div className="flex flex-col md:flex lg:flex-row items-center gap-5 pt-20" id="Home">
+        <div className="flex flex-col md:flex lg:flex-row items-center gap-5 pt-20 md:pt-0" id="Home">
 
         <div className="grid place-items-center  md px-10">
             <h1 className="text-6xl font-bold lg:text-7xl text-center"> <span className="text-green-800">Never Miss</span> a Follow-Up</h1>
