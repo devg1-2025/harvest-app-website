@@ -53,7 +53,15 @@ function Features () {
                 </div>
                 <div className=" text-center bg-gray ">
                     <h3 className="text-2xl md:text-5xl font-bold mb-4 text-center text-white">Download Now - It is free</h3>
-                    <a href="/The Harvest App.apk"><button className=" mt-5 text-xl font-bold text-white cursor-pointer py-2 px-20 border border-white b-md rounded-md text-center hover:shadow-lg transition hover:bg-white hover:text-green-800">Download</button>
+                    <a href="/The Harvest App.apk"><button className=" mt-5 text-xl font-bold text-white cursor-pointer py-2 px-20 border border-white b-md rounded-md text-center hover:shadow-lg transition hover:bg-white hover:text-green-800" 
+                    
+                    onclick="gtag('event', 'download', {
+                    'event_category': 'App',
+                    'event_label': 'Harvest APK',
+                    'value': 1
+                });"
+                    
+                    >Download</button>
                     </a>
                 </div>
             </div>
