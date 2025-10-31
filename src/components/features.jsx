@@ -1,73 +1,57 @@
-import img from "../assets/images/harvest_app_mockup1.png"
+import img from "../assets/images/harvest_app_mockup1.png";
 
-function Features () {
-    return (
-        <div className="mt-10 border-b border-neutral-100">
-            <div className="text-center px-5">
-             <h2 className="text-3xl font-bold text-center">Powerful features to help you evangelize</h2>
-            </div>
+function Features() {
+  return (
+    <section className="py-20 border-t border-neutral-100 bg-white">
+      {/* Section Header */}
+      <div className="text-center px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-green-900 leading-snug">
+          Powerful features that make follow-up effortless
+        </h2>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          Everything your ministry needs to stay connected, organized, and intentional — 
+          even when you’re offline.
+        </p>
+      </div>
 
-            <div className="py-10 ">
-                <div className="md:flex justify-center gap-10 px-10">
-                <div className="flex bg-green-50 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition mb-5">
-                    {/* <div className="flex mx-6 h-10 w-10 p-2 "> */}
-                        {/* feature icon */}
-                    {/* </div> */}
-                    <div>
-                        <h3 className="text-xl font-semibold mb-2">Quick Add Contacts</h3>
-                        <p className="text-md mb-2 text-neutral-500">Capture new convert information instantly during or after service</p>
-                    </div>
-                </div>
-                {/* <div className="flex bg-green-50/40 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition">
-
-                    <div>
-                        <h3 className="text-xl font-semibold mb-2">Smart Reminders</h3>
-                        <p className="text-md mb-2 text-neutral-500">Capture new convert information instantly during or after service</p>
-                    </div>
-                </div> */}
-                <div className="flex bg-green-50 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition mb-5">
-                    {/* <div className="flex mx-6 h-10 w-10 p-2 "> */}
-                        {/* feature icon */}
-                    {/* </div> */}
-                    <div>
-                        <h3 className="text-xl font-semibold mb-2">Bible Verses</h3>
-                        <p className="text-md mb-2 text-neutral-500">Get relevant scripture suggestions for encouragement and follow-up conversations.</p>
-                    </div>
-                </div>
-                <div className="flex bg-green-50 border border-green-100 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    {/* <div className="flex mx-6 h-10 w-10 p-2 "> */}
-                        {/* feature icon */}
-                    {/* </div> */}
-                    <div>
-                        <h3 className="text-xl font-semibold mb-2">Offline-First Design</h3>
-                        <p className="text-md mb-2 text-neutral-500">Works perfectly without internet connection. Sync automatically when you're back online.</p>
-                    </div>
-                </div>
-               
-                
-
-                </div>
-                <div className="grid place-items-center mt-10 bg-green-800 py-10 px-20 lg:flex justify-center md:gap-10" id="download">
-                <div className="max-w-150 my-10">
-                    <img src={img} alt="phone mockup" />
-                </div>
-                <div className=" text-center bg-gray ">
-                    <h3 className="text-2xl md:text-5xl font-bold mb-4 text-center text-white">Download Now - It is free</h3>
-                    <a href="/The Harvest App.apk"><button className=" mt-5 text-xl font-bold text-white cursor-pointer py-2 px-20 border border-white b-md rounded-md text-center hover:shadow-lg transition hover:bg-white hover:text-green-800" 
-                    
-                    onclick="gtag('event', 'download', {
-                    'event_category': 'App',
-                    'event_label': 'Harvest APK',
-                    'value': 1
-                });"
-                    
-                    >Download</button>
-                    </a>
-                </div>
-            </div>
-            </div>
+      {/* Feature Cards */}
+      <div className="mt-14 grid md:grid-cols-3 gap-8 px-8 lg:px-20">
+        {/* Feature 1 */}
+        <div className="bg-green-50 border border-green-100 p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold text-green-800 mb-2">
+            Quick Add Contacts
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Capture new convert and first-timer details instantly during or after service — 
+            no complicated forms required.
+          </p>
         </div>
-    )
+
+        {/* Feature 2 */}
+        <div className="bg-green-50 border border-green-100 p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold text-green-800 mb-2">
+            Bible Verse Suggestions
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Get helpful scripture suggestions for each follow-up conversation — 
+            keeping your message relevant and encouraging.
+          </p>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="bg-green-50 border border-green-100 p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold text-green-800 mb-2">
+            Offline-First Design
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Works seamlessly without internet. Add or view data anytime, 
+            and everything syncs automatically once you’re back online.
+          </p>
+        </div>
+      </div>
+
+    </section>
+  );
 }
 
 export default Features;

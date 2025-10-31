@@ -4,6 +4,8 @@ import Problems from '../components/problems';
 import Features from '../components/features';
 import JoinSection from '../components/join_section';
 import Footer from '../components/footer';
+import Download from '../components/download';
+
 
 
 
@@ -16,8 +18,8 @@ function Home() {
         <HeroSection />
         <Problems />
         <Features />
+        <Download />
         <JoinSection />
-
         <Footer />
         </>
     );

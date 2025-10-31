@@ -1,47 +1,76 @@
 import { Link } from "react-router-dom";
 
-function Footer () {
-    return (
-        <footer className="bg-green-950 text-gray-200" >
-            <div className=" px-5 py-10 mt-10 md:flex md:justify-between gap-20 md:pr-50">
+function Footer() {
+  return (
+    <footer className="bg-green-950 text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+        
+        {/* Brand Info */}
+        <div>
+          <h5 className="text-2xl font-bold text-white mb-4">The Harvest App</h5>
+          <p className="text-gray-400 leading-relaxed">
+            Created to help churches nurture souls and strengthen discipleship.  
+            Transform how your ministry tracks, follows up, and grows with care and consistency.
+          </p>
+        </div>
 
-            <div className="mb-6 max-w-xl"> 
-            <h5 className="text-2xl font-bold mb-4 ">The Harvest App</h5>
-            <p className="md:min-w-[300px]">Created to Help Churches Nurture Souls. Transforming how churches track new converts and build lasting relationships through consistent follow-up.</p>
-            </div>
-                <div>
-                    <div className="flex flex-col justify-center space-x-6 mb-4">
-                        <ul>
+        {/* Quick Links */}
+        <div>
+          <h6 className="text-lg font-semibold text-white mb-3">Quick Links</h6>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/" className="hover:text-green-400 transition-colors">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/blogs" className="hover:text-green-400 transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <a href="#download" className="hover:text-green-400 transition-colors">
+                Download
+              </a>
+            </li>
+          </ul>
+        </div>
 
-                    <Link 
-                        to="/"
-                        >
-                        <li className="hover:text-green-500">Home</li>
-                        </Link>
-                        <Link 
-                        to="/blogs"
-                        >
-                        <li className="hover:text-green-500">Blog</li>
-                        </Link>
-                        <a href="#download" className="hover:text-green-500">Download</a>
-                    </ul>
-                    </div>
-                </div>
-            <div className="">
-                <div className="flex flex-col justify-center space-x-6 mb-2">
-                    <h6 className="text-md font-bold">Contact</h6>
-                    <a href="mailto:tryttechglobal@gmail.com" className="hover:text-green-500">tryttechglobal@gmail.com</a>
-                    <a href="https://wa.me/2348166528347" className="hover:text-green-500">+234 816 652 8347</a>
-                </div>
+        {/* Contact Info */}
+        <div>
+          <h6 className="text-lg font-semibold text-white mb-3">Contact</h6>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="mailto:tryttechglobal@gmail.com"
+                className="hover:text-green-400 transition-colors"
+              >
+                tryttechglobal@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/2348166528347"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-400 transition-colors"
+              >
+                +234 816 652 8347
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            </div>
-            </div>
-            <hr className="text-neutral-300" />
-            <div className="container mx-auto p-4 text-center ">
-                <p>&copy; {new Date().getFullYear()} The Harvest App. All rights reserved.</p>
-            </div>
-        </footer>
-    );
-}   
+      {/* Bottom Bar */}
+      <div className="border-t border-green-800/50 py-6 mt-6">
+        <p className="text-center text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} <span className="font-semibold text-white">The Harvest App</span>.  
+          All rights reserved. Crafted with ❤️ by Tryt Tech.
+        </p>
+      </div>
+    </footer>
+  );
+}
 
 export default Footer;

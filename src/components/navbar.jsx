@@ -1,72 +1,100 @@
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo/harvest_app_icon.png"
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo/harvest_app_icon.png";
 
-function NavBar() { 
-  
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-  const toggleNavbar = () => {
-    setMobileDrawerOpen(!mobileDrawerOpen);
-  }
+function NavBar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
+  const toggleNavbar = () => setMobileOpen(!mobileOpen);
+
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "Blog", path: "/blogs" },
+  ];
 
   return (
-    <nav className="sticky px-10 py-5 text-green-800 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60  "> 
-        <div className="container flex justify-between items-center mx-auto">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-green-100 shadow-sm transition-all">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Harvest App logo"
+            className="w-7 h-7 object-contain"
+          />
+          <h1 className="text-lg md:text-xl font-bold text-green-800 tracking-tight">
+            The Harvest App
+          </h1>
+        </Link>
 
-        <div className="flex gap-2">
-          <img src={logo} alt="" width={25} height={10}/>
-          <h1 className="text-xl font-bold tracking-tight">The Harvest App</h1>  
-        </div>
-
-
-        <ul className="hidden md:flex gap-8 list-none">
-          <Link 
-          to="/">
-              <li className=" cursor-pointer border-b-2 border-transparent hover:border-green-700 transition-all duration-300" >Home</li>
-          </Link>
-          <Link to="/blogs">
-            <li className=" cursor-pointer border-b-2 border-transparent hover:border-green-700 transition-all duration-300">Blog</li>
-          </Link>
-
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex gap-8 text-green-800 font-medium">
+          {navItems.map((item) => (
+            <Link key={item.path} to={item.path}>
+              <li
+                className={`cursor-pointer border-b-2 transition-all duration-300 ${
+                  location.pathname === item.path
+                    ? "border-green-700 text-green-900 font-semibold"
+                    : "border-transparent hover:border-green-600"
+                }`}
+              >
+                {item.label}
+              </li>
+            </Link>
+          ))}
         </ul>
-       
+
+        {/* Desktop Button */}
         <div className="hidden md:flex">
-        <a href="#download">
-            <button className="cursor-pointer py-2 px-5 border rounded-md bg-green-800 text-white">Download</button>
-        </a>
+          <a href="#download">
+            <button className="py-2 px-6 rounded-lg bg-green-700 text-white hover:bg-green-800 shadow-sm transition-all duration-300">
+              Download
+            </button>
+          </a>
         </div>
 
-        <div className="md:hidden md:flex flex-col justify-end">
-        <button onClick={toggleNavbar}>
-          {mobileDrawerOpen ? <X /> : <Menu /> }
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleNavbar}
+          aria-label="Toggle navigation"
+          className="md:hidden text-green-800"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        </div>
+      </div>
 
-        {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 top-16 w-full p-3 px-10 flex flex-col justify-center text-center bg-green-50 border-b md:hidden ">
-            <ul>
-              <Link 
-              to="/"
-              >
-              <li className="py-3 ">Home</li>
-              </Link>
-              <Link 
-              to="/blogs"
-              >
-              <li>Blog</li>
-              </Link>
-              <div className="py-4">
-              <a href="#download">
-                  <button className="cursor-pointer py-2 px-20 border rounded-md bg-green-800 text-white">Download</button>
-              </a>
-            </div>
-            </ul>
+      {/* Mobile Drawer */}
+      <div
+        className={`absolute top-16 w-full bg-green-50 border-t border-green-100 flex flex-col items-center gap-6 py-6 text-green-800 font-medium transition-all duration-300 ease-in-out ${
+          mobileOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-5 pointer-events-none"
+        }`}
+      >
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            onClick={() => setMobileOpen(false)}
+            className={`${
+              location.pathname === item.path
+                ? "text-green-900 font-semibold"
+                : "hover:text-green-700"
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
 
-          </div>
-        )}
-        </div>
+        <a href="#download" onClick={() => setMobileOpen(false)}>
+          <button className="py-2 px-10 rounded-lg bg-green-700 text-white hover:bg-green-800 shadow-sm transition-all">
+            Download
+          </button>
+        </a>
+      </div>
     </nav>
   );
 }
