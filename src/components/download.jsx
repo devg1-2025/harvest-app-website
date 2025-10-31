@@ -2,7 +2,7 @@ import img from "../assets/images/harvest_app_mockup1.png";
 
 function Download() {
   return (
-    <section className="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-6 md:px-16">
+    <section id="download" className="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-6 md:px-16">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-14">
         
         {/* App Mockup */}

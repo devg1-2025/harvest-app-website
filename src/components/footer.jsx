@@ -66,7 +66,7 @@ function Footer() {
       <div className="border-t border-green-800/50 py-6 mt-6">
         <p className="text-center text-sm text-gray-500">
           &copy; {new Date().getFullYear()} <span className="font-semibold text-white">The Harvest App</span>.  
-          All rights reserved. Crafted with ❤️ by Tryt Tech.
+          All rights reserved.
         </p>
       </div>
     </footer>
